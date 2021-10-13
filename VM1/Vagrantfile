@@ -1,3 +1,6 @@
+# Automated EC2 Instance VM for Dog museum 
+# By Francesca Kraayvanager, with basis code from lab09
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 class Hash
@@ -10,15 +13,9 @@ class Hash
     slice(*keys - less_keys)
   end unless Hash.method_defined?(:except)
 end
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
 
 Vagrant.configure("2") do |config|
-  # Online Vagrantfile documentation is at https://docs.vagrantup.com.
 
-  # The AWS provider does not actually need to use a Vagrant box file.
   config.vm.box = "dummy"
 
   config.vm.provider :aws do |aws, override|
@@ -30,14 +27,14 @@ Vagrant.configure("2") do |config|
     override.nfs.functional = false
     override.vm.allowed_synced_folder_types = :rsync
 
-    
+    # Keypair was created within the AWS console, and downloaded to the local computers .ssh directory.
     aws.keypair_name = "cosc349-ASSIGN2"
     
     override.ssh.private_key_path = "~/.ssh/cosc349-ASSIGN2.pem"
-
+    # Lessens the cost, less RAM. Perfect for this webserver.
     aws.instance_type = "t2.micro"
 
-    
+    # These Security groups allow for SSH to occur as well as HTTP access.
     aws.security_groups = ["sg-0cb2283b32173cb46", "sg-021c6b5653280b9c6"]
 
     
@@ -50,6 +47,9 @@ Vagrant.configure("2") do |config|
     
     override.ssh.username = "ubuntu"
   end
+  
+  # Provisioning for the VM with the use of apache2.
+  # Used the command sudo systemctl start httpd within the ssh VM to start the webserver.
   config.vm.provision "shell", inline: <<-SHELL
      apt-get update
      apt-get install -y apache2 php libapache2-mod-php php-mysql
