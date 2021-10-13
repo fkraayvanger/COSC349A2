@@ -28,7 +28,7 @@
   <?php
 
   $db_host   = '';
-  $db_name   = 'A2databse';
+  $db_name   = 'A2data';
   $db_user   = 'admin';
   $db_passwd = '';
 
