@@ -28,7 +28,7 @@
 <?php
  
 $db_host   = '';
-$db_name   = 'A2databse';
+$db_name   = 'A2data';
 $db_user   = 'admin';
 $db_passwd = '';
 
@@ -53,7 +53,7 @@ echo "<tr><td>".$row["dog_name"]."</td><td>".$row["dog_price"]."</td><td>".$row[
 <?php
 
 $db_host   = '';
-$db_name   = 'A2databse';
+$db_name   = 'A2data';
 $db_user   = 'admin';
 $db_passwd = '';
 
