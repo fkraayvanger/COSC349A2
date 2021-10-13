@@ -27,10 +27,10 @@
 <tr><th>Dog Name</th><th>Dog Price</th><th>Dog Age</th></tr>
 <?php
  
-$db_host   = 'a2database.c3m1yjmjzwbn.us-east-1.rds.amazonaws.com';
+$db_host   = '';
 $db_name   = 'A2databse';
 $db_user   = 'admin';
-$db_passwd = 'tukituki';
+$db_passwd = '';
 
 $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
 
@@ -52,10 +52,10 @@ echo "<tr><td>".$row["dog_name"]."</td><td>".$row["dog_price"]."</td><td>".$row[
 
 <?php
 
-$db_host   = 'a2database.c3m1yjmjzwbn.us-east-1.rds.amazonaws.com';
+$db_host   = '';
 $db_name   = 'A2databse';
 $db_user   = 'admin';
-$db_passwd = 'tukituki';
+$db_passwd = '';
 
 $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
 
