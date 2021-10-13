@@ -27,10 +27,10 @@
 
   <?php
 
-  $db_host   = 'a2database.c3m1yjmjzwbn.us-east-1.rds.amazonaws.com';
+  $db_host   = '';
   $db_name   = 'A2databse';
   $db_user   = 'admin';
-  $db_passwd = 'tukituki';
+  $db_passwd = '';
 
   $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
 
