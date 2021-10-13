@@ -82,24 +82,24 @@
   font-size: 17px;
   }
 
-    .topnav a:hover {
-    background-color: #E38AAE;
-    color: black;
-    }
+  .topnav a:hover {
+  background-color: #E38AAE;
+  color: black;
+  }
 
-    .topnav a.active {
-    background-color: #E38AAE;
-    color: white;
-    }
+  .topnav a.active {
+  background-color: #E38AAE;
+  color: white;
+  }
 
-    label {
-        display: block;
-        font: 1rem 'Fira Sans', sans-serif;
-    }
+  label {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+  }
 
-    input,
-    label {
-        margin: .4rem 0;
-    }
-  </style>
+  input,
+  label {
+  margin: .4rem 0;
+  }
+</style>
 
